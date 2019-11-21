@@ -79,6 +79,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	/*
 	 * non overridden methods of WebListener class
 	 */
+
 	public void beforeScript(String script, WebDriver driver) {
 	}
 

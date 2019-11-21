@@ -5,14 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import javax.imageio.stream.FileImageInputStream;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebEventListener;
@@ -24,6 +22,7 @@ public class TestBase {
 	public WebDriverWait wait;
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
+
 
 	
 	public TestBase(){
@@ -42,6 +41,8 @@ public class TestBase {
 	
 	public static void initialization() {
 		
+        //PropertyConfigurator.configure("C:\\Users\\amitk\\eclipse-workspace\\freeCRMpractice\\freecrmtest1\\src\\main\\resaurces\\log4j.properties");
+
 		String browsername = prop.getProperty("browser");
 		if(browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver","D:\\Project Files\\chromedriver.exe");

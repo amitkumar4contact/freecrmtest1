@@ -30,7 +30,7 @@ public class TestUtil extends TestBase{
 
 	
 	
-	//Here u can add Frame change menthod.
+	//Here u can add Frame change method.
 	
 	public void switchToFrame() {
 		driver.switchTo().frame("downloadFrame");

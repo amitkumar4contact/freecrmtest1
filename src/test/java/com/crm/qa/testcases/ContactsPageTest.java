@@ -1,6 +1,7 @@
 package com.crm.qa.testcases;
 
 import org.openqa.selenium.By;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -11,6 +12,9 @@ import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class ContactsPageTest extends TestBase{
 	
@@ -27,6 +31,11 @@ public class ContactsPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void Setup() {
+		Logger log = Logger.getLogger(ContactsPageTest.class);
+
+		PropertyConfigurator.configure("C:\\Users\\amitk\\eclipse-workspace\\freeCRMpractice\\freecrmtest1\\src\\main\\resaurces\\log4j.properties");
+
+
 		initialization();
 		//testUtil = new TestUtil(); //if test util is used for frame
 		contactsPage = new ContactsPage(); //here it is initialized.
