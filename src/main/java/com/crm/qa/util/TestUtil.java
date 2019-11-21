@@ -23,7 +23,7 @@ public class TestUtil extends TestBase{
 
 	public static long IMPLICIT_WAIT = 50;
 	
-	public static String TESTDATA_SHEET_PATH = "C:\\Users\\amitk\\eclipse-workspace\\freeCRMpractice\\src\\main\\java\\com\\crm\\qa\\testdata\\FreeCrmTestData.xlsx";
+	public static String TESTDATA_SHEET_PATH = "C:\\Users\\amitk\\eclipse-workspace\\freeCRMpractice\\freecrmtest1\\src\\main\\java\\com\\crm\\qa\\testdata\\FreeCrmTestData.xlsx";
 
 	static Workbook book;
 	static Sheet sheet;

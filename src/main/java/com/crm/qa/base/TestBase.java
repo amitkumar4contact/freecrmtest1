@@ -30,7 +30,7 @@ public class TestBase {
 		
 		prop = new Properties();
 		try {
-			FileInputStream fis = new FileInputStream("C:\\Users\\amitk\\eclipse-workspace\\freeCRMpractice\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream("C:\\Users\\amitk\\eclipse-workspace\\freeCRMpractice\\freecrmtest1\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
