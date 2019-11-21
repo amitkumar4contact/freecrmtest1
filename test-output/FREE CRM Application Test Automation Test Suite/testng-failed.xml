@@ -10,7 +10,11 @@
         <methods>
           <include name="teardown"/>
           <include name="Setup"/>
+          <include name="LoginPageForgetPasswordLinkTest"/>
+          <include name="loginTest"/>
+          <include name="LoginPageSignupLinkTest"/>
           <include name="LoginPageTitleTest"/>
+          <include name="LoginPageClassicCRMLoginLinkTest"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.LoginPageTest -->
       <class name="com.crm.qa.testcases.HomePageTest">

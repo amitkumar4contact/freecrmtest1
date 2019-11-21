@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test name="Default test(failed)">
+<suite name="Failed suite [FREE CRM Application Test Automation Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test name="Free CRM App Test Cases(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.ContactsPageTest">
+      <class name="com.crm.qa.testcases.LoginPageTest">
         <methods>
-          <include name="validataCreateNewContactfromExcel"/>
+          <include name="teardown"/>
           <include name="Setup"/>
-          <include name="tearDown"/>
+          <include name="LoginPageForgetPasswordLinkTest"/>
+          <include name="loginTest"/>
+          <include name="LoginPageSignupLinkTest"/>
+          <include name="LoginPageTitleTest"/>
+          <include name="LoginPageClassicCRMLoginLinkTest"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
+      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
+      <class name="com.crm.qa.testcases.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTitleTest"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.HomePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Free CRM App Test Cases(failed) -->
+</suite> <!-- Failed suite [FREE CRM Application Test Automation Test Suite] -->
