@@ -31,9 +31,7 @@ public class ContactsPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void Setup() {
-		Logger log = Logger.getLogger(ContactsPageTest.class);
 
-		PropertyConfigurator.configure("C:\\Users\\amitk\\eclipse-workspace\\freeCRMpractice\\freecrmtest1\\src\\main\\resaurces\\log4j.properties");
 
 
 		initialization();
@@ -45,12 +43,12 @@ public class ContactsPageTest extends TestBase{
 		homePage.clickonContactsLink();
 		
 	}
-	/*
-	@Test (priority =1)
-	public void verifyContactsPageLabel() {
-		Assert.assertTrue(contactsPage.verifyContactLabel(), "label missing");
-	}
 	
+	@Test  //(retryAnalyzer = com.crm.qa.Analyzer.RetryAnalyzer.class) // This is to defined Fail retry on this class
+	public void verifyContactsPageLabel() {
+		Assert.assertEquals(true, false);
+	}
+	/*
 	@Test (priority =2)
 	public void selectSingleContactTest()  {
     contactsPage.selectContactsByName("Amit kumar");
@@ -61,7 +59,7 @@ public class ContactsPageTest extends TestBase{
     contactsPage.selectContactsByName("Amit kumar");
     contactsPage.selectContactsByName("sumit kumar");
 	}
-    */
+   
     @DataProvider
     public Object[][] getCRMTestData() {
     	Object data[][] =TestUtil.getTestData(sheetName);
@@ -74,7 +72,7 @@ public class ContactsPageTest extends TestBase{
     	contactsPage.clickOnNewContact();
     	contactsPage.createNewContact(firstname, lastname);
     	
-    }
+    } */
     /*
 	@Test (priority =5)
     public void validateCreateNewContactManual() {

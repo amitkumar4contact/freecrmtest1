@@ -11,7 +11,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebEventListener;
 
@@ -22,6 +21,7 @@ public class TestBase {
 	public WebDriverWait wait;
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
+
 
 
 	
@@ -47,6 +47,7 @@ public class TestBase {
 		if(browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver","D:\\Project Files\\chromedriver.exe");
 			driver = new ChromeDriver();
+
 			
 		/*else is used to execute set of code if 
 		 * "if" is 'false'. elseif is used execute 
@@ -64,13 +65,13 @@ public class TestBase {
 			driver = new FirefoxDriver();
 			
 		}
-		
+		/*
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
 		driver = e_driver;
-		
+		*/
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
