@@ -23,9 +23,6 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//*[contains(text(), 'Calendar')]")
 	WebElement calendarLink;
 	
-	@FindBy(xpath="//*[contains(text(), 'Amit Kumar')]")
-	WebElement userNameLabel;
-	
 	@FindBy(xpath="//*[contains(text(), 'Contacts')]")
 	WebElement contactsLink;
 	
@@ -55,30 +52,7 @@ public class HomePage extends TestBase{
 	
 	@FindBy(xpath="//*[contains(text(), 'Forms')]")
 	WebElement formsLink;
-	
-	@FindBy(xpath="//*[@class='ui basic button floating item dropdown']")
-	WebElement settingdropdownLink;
-	
-	@FindBy(xpath="//*[contains(text(), 'Settings')]")
-	WebElement settingLink;
-	
-	@FindBy(xpath="//*[contains(text(), 'Products')]")
-	WebElement productsLink;
-	
-	@FindBy(xpath="//*[contains(text(), 'Import')]")
-	WebElement importLink;
-	
-	@FindBy(xpath="//*[contains(text(), 'Tools')]")
-	WebElement toolsLink;
-	
-	@FindBy(xpath="//*[contains(text(), 'Log Out')]")
-	WebElement logoutLink;
 
-
-	 
-	
-	
-	
 	
 	// Initialization
 	
@@ -90,10 +64,7 @@ public class HomePage extends TestBase{
 		return driver.getTitle();
 	}
 	
-	public boolean verifyCorrectUserName() {
-		System.out.println(userNameLabel.getText());
-		return userNameLabel.isDisplayed();
-	}
+	
 	
 	public ContactsPage clickonContactsLink() {
 		contactsLink.click();
