@@ -2,29 +2,21 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-09T13:13:28Z" name="Default suite" finished-at="2019-12-09T13:13:44Z" duration-ms="15759">
+  <suite started-at="2019-12-26T15:58:30Z" name="Default suite" finished-at="2019-12-26T15:58:49Z" duration-ms="19432">
     <groups>
     </groups>
-    <test started-at="2019-12-09T13:13:28Z" name="Default test" finished-at="2019-12-09T13:13:44Z" duration-ms="15759">
-      <class name="com.crm.qa.testcases.ContactsPageTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:com.crm.qa.testcases.ContactsPageTest@13acb0d1]" started-at="2019-12-09T18:43:28Z" name="Setup" finished-at="2019-12-09T18:43:41Z" duration-ms="13053" status="PASS">
+    <test started-at="2019-12-26T15:58:30Z" name="Default test" finished-at="2019-12-26T15:58:49Z" duration-ms="19432">
+      <class name="com.crm.qa.testcases.CommonPageTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:com.crm.qa.testcases.CommonPageTest@6107227e]" started-at="2019-12-26T21:28:30Z" name="Setup" finished-at="2019-12-26T21:28:39Z" duration-ms="8829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="verifyContactsPageLabel()[pri:0, instance:com.crm.qa.testcases.ContactsPageTest@13acb0d1]" started-at="2019-12-09T18:43:41Z" name="verifyContactsPageLabel" finished-at="2019-12-09T18:43:41Z" duration-ms="6" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [false] but found [true]]]>
-            </message>
+        <test-method signature="logoutTest()[pri:3, instance:com.crm.qa.testcases.CommonPageTest@6107227e]" started-at="2019-12-26T21:28:39Z" name="logoutTest" finished-at="2019-12-26T21:28:49Z" duration-ms="10005" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:304)
-	at org.testng.Assert.assertEquals(Assert.java:314)
-	at com.crm.qa.testcases.ContactsPageTest.verifyContactsPageLabel(ContactsPageTest.java:49)
+              <![CDATA[java.lang.NullPointerException
+	at com.crm.qa.pages.CommonPage.validateLogoutPannelDropdownSettingButton(CommonPage.java:91)
+	at com.crm.qa.testcases.CommonPageTest.logoutTest(CommonPageTest.java:62)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,15 +44,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyContactsPageLabel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.ContactsPageTest@13acb0d1]" started-at="2019-12-09T18:43:41Z" name="tearDown" finished-at="2019-12-09T18:43:44Z" duration-ms="2680" status="PASS">
+        </test-method> <!-- logoutTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.crm.qa.testcases.CommonPageTest@6107227e]" started-at="2019-12-26T21:28:49Z" name="teardown" finished-at="2019-12-26T21:28:49Z" duration-ms="575" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
+        </test-method> <!-- teardown -->
+      </class> <!-- com.crm.qa.testcases.CommonPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

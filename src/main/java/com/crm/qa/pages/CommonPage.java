@@ -1,21 +1,19 @@
 package com.crm.qa.pages;
 
-import javax.security.auth.kerberos.KerberosKey;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
-
 import com.crm.qa.base.TestBase;
 
 public class CommonPage extends TestBase {
 	public static WebElement element;
 	public static WebElement toolTipElement;
 	Actions toolAct;
+	LoginPage loginPage = new LoginPage();	
+	//SettingsPage settingPage = new SettingsPage();
 
 	@FindBy(xpath = "//*[@class='ui basic button floating item dropdown']")
 	WebElement settingdropdownLink;
@@ -49,17 +47,15 @@ public class CommonPage extends TestBase {
 		return userNameLabel.isDisplayed();
 	}
 
-	public void settingsPannelBeta() {
-		String s = "This is Beta software and as such, will contain bugs. We are working to resolve all issues.";
+	public String settingsPannelBeta() {
 		toolAct = new Actions(driver);
 		element = driver.findElement(By.xpath("//*[contains(text(), 'Beta')]"));
 		toolAct.moveToElement(element).build().perform();
 		toolTipElement = driver
 				.findElement(By.xpath("//*[@class='ui bottom center inverted popup transition visible']"));
 		String toolTipText = toolTipElement.getText();
-		Assert.assertEquals(s,
-				"This is Beta software and as such, will contain bugs. We are working to resolve all issues.");
 		System.out.println(toolTipText);
+		return toolTipText;
 	}
 
 	public SettingsPage validateSettingsPannelDropdownSettingButton() {
@@ -90,10 +86,14 @@ public class CommonPage extends TestBase {
 
 	}
 
-	public LoginPage validateLogoutPannelDropdownSettingButton() {
+	public LoginPage validateLogoutPannelDropdownSettingButton() throws InterruptedException {
+		Thread.sleep(10000);
 		settingdropdownLink.click();
+		Thread.sleep(10000);
 		logoutLink.click();
+		Thread.sleep(10000);
 		return new LoginPage();
+	
 
 	}
 	
@@ -109,5 +109,6 @@ public class CommonPage extends TestBase {
 		return new RecycleBinPage();
 
 	}
+	
 
 }

@@ -45,11 +45,7 @@ public class HomePageTest extends TestBase{
 		Assert.assertEquals(homePageTitle, "CRM");
 	}
 	
-	@Test(priority = 2)
-	public void verifyUserNameTest() {
-		//testUtil.switchToFrame();
-		Assert.assertTrue(homePage.verifyCorrectUserName());
-	}
+	
 	
 	@Test(priority =3)
 	public void verifyContactsPageLink() {
